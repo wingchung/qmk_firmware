@@ -22,11 +22,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6062
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Profet
-#define PRODUCT         Atreus62
+#define VENDOR_ID 0xFEED
+#define PRODUCT_ID 0x6062
+#define DEVICE_VER 0x0001
+#define MANUFACTURER Profet
+#define PRODUCT Atreus62
 #define DESCRIPTION     q.m.k. keyboard firmware for Atreus62
 
 /* key matrix size */
@@ -35,11 +35,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 13
 
 // wiring of each half
-#define MATRIX_ROW_PINS { D2, D3, D1, D0, D4 }
-#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2, B6, B5, B4, E6, D7, C6 }
+#define MATRIX_ROW_PINS    \
+    {                      \
+        D2, D3, D1, D0, D4 \
+    }
+#define MATRIX_COL_PINS                                    \
+    {                                                      \
+        F4, F5, F6, F7, B1, B3, B2, B6, B5, B4, E6, D7, C6 \
+    }
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION ROW2COL
+#define DIODE_DIRECTION COL2ROW
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
@@ -57,8 +63,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* key combination for command */
 #define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
+    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
 /*
  * Feature disable options
@@ -66,16 +71,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* disable debug print */
-// #define NO_DEBUG
+#define NO_DEBUG
 
 /* disable print */
-// #define NO_PRINT
+#define NO_PRINT
 
 /* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
+// #define NO_ACTION_LAYER
+// #define NO_ACTION_TAPPING
+// #define NO_ACTION_ONESHOT
+// #define NO_ACTION_MACRO
+// #define NO_ACTION_FUNCTION
 
 #endif
