@@ -39,11 +39,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     {                      \
         D2, D3, D1, D0, D4 \
     }
+// #define MATRIX_COL_PINS                                    
+//     {                                                      
+//         F4, F5, F6, F7, B1, B3, B2, B6, B5, B4, E6, D7, C6 
+//     }
 #define MATRIX_COL_PINS                                    \
     {                                                      \
-        F4, F5, F6, F7, B1, B3, B2, B6, B5, B4, E6, D7, C6 \
+        C6, D7, E6, B4, B5, B6, B2, B3, B1, F7, F6, F5, F4\
     }
-
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
